@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-if (env('APP_ENV') === 'production') {
+if (env('APP_ENV') === 'local') {
     URL::forceSchema('https');
 }
