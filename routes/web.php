@@ -21,11 +21,11 @@ Route::get('/', function () {
     return view('todos');
 });
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('calendar');
 });
 
 Route::get('/', function () {
     return view('board');
-});
+});*/
 
