@@ -251,6 +251,11 @@ return [
             'url'  => 'calendar',
             'icon' => 'fas fa-fw fa-calendar-alt',
         ],
+        [
+            'text' => 'Board',
+            'url'  => 'board',
+            'icon' => 'far fa-clipboard',
+        ],
         ['header' => 'account_settings'],
         [
             'text' => 'profile',
