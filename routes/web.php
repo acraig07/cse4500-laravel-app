@@ -33,3 +33,6 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
+Route::fallback(function () {
+    return view('what-ever');
+});
