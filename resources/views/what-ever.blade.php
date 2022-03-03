@@ -3,7 +3,7 @@
 @section('title', 'what-ever')
 
 @section('content_header')
-    <h1>what-ever</h1>
+    <h1>Error</h1>
 @stop
 
 @section('content')
