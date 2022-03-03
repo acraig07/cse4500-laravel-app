@@ -242,16 +242,14 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text' => 'To Do\'s',
+            'url'  => 'todos',
+            'icon' => 'fas fa-fw fa-file',
         ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text' => 'Calendar',
+            'url'  => 'calendar',
+            'icon' => 'fas fa-fw fa-calendar-alt',
         ],
         ['header' => 'account_settings'],
         [
