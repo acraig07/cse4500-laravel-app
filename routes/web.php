@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
+use App\Models\Calendar;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,7 @@ Route::get('/todos', function () {
 });
 
 Route::resource('/todos', TodoController::class);
+Route::resource('/calendars', CalendarController::class);
 Route::get('/calendar', function () {
     return view('calendar');
 });
