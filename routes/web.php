@@ -26,7 +26,7 @@ Route::get('/todos', function () {
 
 Route::resource('/todos', TodoController::class);
 
-Route::resource('/calendars', CalanderController::class);
+Route::resource('/calendars', CalenderController::class);
 
 Route::get('/calendar', function () {
     return view('calendar');
