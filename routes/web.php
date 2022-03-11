@@ -33,6 +33,14 @@ Route::get('/events-feed', function () {
     return view('events-feed');
 });
 
+Route::get('/db-test', function () {
+    try {
+         echo \DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+          echo 'None';
+    }
+});
+
 Route::fallback(function () {
     return view('what-ever');
 });
