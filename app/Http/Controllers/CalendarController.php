@@ -25,7 +25,7 @@ class CalendarController extends Controller
      */
     public function create()
     {
-        return view('calendars.create');
+        return view('calendar.create');
     }
 
     /**
@@ -38,18 +38,13 @@ class CalendarController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required',
-            'start_date' => 'required',
-            'start_time' => 'required',
-            'end_date' => 'required',
-            'end_time' => 'required',
+            'progress' => 'required',
         ]);
 
-        $calendars = Calendar::create([
+        $todo = Todo::create([
             'title' => $request->title,
-            'start_date' => $request->start_date,
-            'start_time' => $request->start_time,
-            'end_date' => $request->end_date,
-            'end_time' => $request->end_time,
+            'start_at AS start' => $request->start,
+            'end_at AS end' => $request->end,
         ]);
 
        return $this->index();
