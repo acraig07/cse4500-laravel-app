@@ -38,7 +38,10 @@ class CalanderController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required',
-            'progress' => 'required',
+            'start_date' => 'required',
+            'start_time' => 'required',
+            'end_date' => 'required',
+            'end_time' => 'required',
         ]);
 
         $calendar = Calendar::create([
