@@ -17,7 +17,7 @@
     </div>
   </div>
 </div>
-<a href="{{ route('todos.create') }} " class="btn btn-primary" >Create</a>
+<a href="{{ route('calendars.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
