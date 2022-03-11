@@ -25,7 +25,7 @@ class CalenderController extends Controller
      */
     public function create()
     {
-        return view('calendar.create');
+        return view('calendars.create');
     }
 
     /**
