@@ -44,7 +44,7 @@ class CalendarController extends Controller
             'end_time' => 'required',
         ]);
 
-        $calendar = Calendar::create([
+        $calendars = Calendar::create([
             'title' => $request->title,
             'start_date' => $request->start_date,
             'start_time' => $request->start_time,
