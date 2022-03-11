@@ -14,7 +14,7 @@ class CalanderController extends Controller
      */
     public function index()
     {
-        $todos = Calendar::all();
+        $calendar = Calendar::all();
         return view('calendar',compact('calendar'));
     }
 
