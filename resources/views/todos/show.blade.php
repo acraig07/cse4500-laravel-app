@@ -7,7 +7,6 @@
 @stop
 
 @section('content')
-    <h2>{{ $calendar->title; }}</h2>
-    <div><p>{{ $calendar->start; }}% Start</p></div>
-    <div><p>{{ $calendar->end; }}% Ends</p></div>
+  <h2>{{ $todo->title; }}</h2>
+  <div><p>{{ $todo->progress; }}% finished</p></div>
 @stop
