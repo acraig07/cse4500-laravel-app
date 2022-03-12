@@ -14,8 +14,8 @@ class CalendarController extends Controller
      */
     public function index()
     {
-        $calendar = Calendar::all();
-        return view('calendar',compact('calendar'));
+        $events = Calendar::select('title', 'start_time AS start', 'end_time AS end')->get();
+        return json_encode( compact('events')['events'] );
     }
 
     /**
@@ -25,7 +25,7 @@ class CalendarController extends Controller
      */
     public function create()
     {
-        return view('calendar.create');
+        return view('eventsfeed.create');
     }
 
     /**
@@ -38,16 +38,18 @@ class CalendarController extends Controller
     {
         $validated = $request->validate([
             'title' => 'required',
-            'progress' => 'required',
+            'start_at' => 'required',
+            'end_at' => 'required',
         ]);
 
-        $todo = Todo::create([
+        //Calls the event model to create a new record & save the data
+        $eventsfeed = Calendar::create([
             'title' => $request->title,
-            'start_at AS start' => $request->start,
-            'end_at AS end' => $request->end,
+            'start_time' => date($request->start_at),
+            'end_time' => date($request->end_at),
         ]);
 
-       return $this->index();
+        return redirect('/calendar');
 
     }
 
@@ -60,7 +62,7 @@ class CalendarController extends Controller
     public function show($id)
     {
         $calendar= Calendar::find($id);
-        return view('calendar.show',compact('calendar'));
+        return view('eventsfeed.show',compact('calendar'));
     }
 
     /**

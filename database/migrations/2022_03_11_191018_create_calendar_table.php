@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('calendar', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('start_at AS start');
-            $table->string('end_at AS end');
+            $table->string('start_time');
+            $table->string('start_time');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calendar');
+        Schema::dropIfExists('events');
     }
 };
