@@ -1,4 +1,4 @@
-#Larvel Assignment
+# Larvel Assignment
 This assignment is designed to demonstrate how to create a project with the Laravel framework and configure it on the remote server. You will also learn how to install packages for the framework. Additionally, you will also create a basic route that returns JSON data.
 
 
